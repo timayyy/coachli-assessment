@@ -2,6 +2,7 @@ import styled from "styled-components";
 
 export const StyledSideBar = styled.nav`
   background-color: ${({ theme }) => theme.colors.mainWhite};
+  // padding-bottom: 4.5rem;
   width: 24rem;
   height: 100vh;
   position: sticky;

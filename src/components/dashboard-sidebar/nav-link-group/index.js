@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import { MenuData, SettingsMenuData } from "../../../services/menuData";
 import NavLink from "../nav-link";
+import { BiLogOut } from "react-icons/bi";
 
 const LinksGroup = styled.div`
   padding: 0 2rem 2rem 1rem;
@@ -52,8 +53,6 @@ const NavLinkGroup = (props) => {
         {MenuData.map((menu, i) => (
           <NavLink
             key={i}
-            toggleNav={props.toggleNav}
-            link={menu.to}
             compact={props.compact}
             label={menu.label}
             icon={menu.icon}
@@ -66,12 +65,14 @@ const NavLinkGroup = (props) => {
         {SettingsMenuData.map((menu, i) => (
           <NavLink
             key={i}
-            toggleNav={props.toggleNav}
             compact={props.compact}
             label={menu.label}
             icon={menu.icon}
           />
         ))}
+      </div>
+      <div style={{ marginTop: "15rem" }}>
+        <NavLink label="Logout" icon={<BiLogOut />} />
       </div>
     </LinksGroup>
   );

@@ -104,7 +104,6 @@ const NavLink = ({
     <LinkContainer>
       <StyledLink
         className={label === "Dashboard" && "active"}
-        onClick={toggleNav}
         compact={compact}
         {...rest}
       >
